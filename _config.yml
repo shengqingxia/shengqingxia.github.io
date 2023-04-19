@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Shengqing Xia"
 title_separator          : "-"
 name                     : &name "Shengqing Xia"
-description              : &description "personal description"
+description              : &description "2nd-year PhD student at Purdue University"
 url                      : https://shengqingxia.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shengqingxia/shengqingxia.github.io"
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Shengqing Xia"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              :
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
