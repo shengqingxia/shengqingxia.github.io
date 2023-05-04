@@ -20,17 +20,6 @@ Making Mobile Vision More Efficient with More Video Compression
 Given the fast development in computer vision, we orthogonally enforces more efficient compression for the specific vision inference tasks. Our approach  adapts to input contexts and significantly reduces the volume of video data without sacrificing visual inference accuracy.
 <!--Compress Video without Compromising Analytical Accuracy-->
 
-#### DCC: Towards Live Video Analytics with On-Drone Deeper-yet-Compatible Compression
-
-<div style="display: flex">
-    <video width="320" height="240" controls style="float: left; margin-right: 10px;">
-        <source src="../images/dcc.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p style="margin-top: 40px;">DCC utilizes the drone-specific context and intermediate information obtained from object detection to
-jointly adjust the resolution, QP, and frame rate during runtime. To demonstrate its effectiveness, we use vehicle detection from the drone as a showcase example.</p>
-</div>
-
 
 #### VPPlus: Exploring the Potentials of Video Processing for Live Video Analytics at the Edge
 
