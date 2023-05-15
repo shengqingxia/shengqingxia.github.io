@@ -8,8 +8,7 @@ redirect_from:
   - /project.html
 ---
 
-My research aims to build an efficient mobile vision system with edge-assisted live video analytics.
-I am interested in exploiting and developing a multi-disciplinary solution that incorporates computer vision, edge computing, multimedia and machine learning to enhance the system's effectiveness and efficiency. 
+My research aims to build an efficient and effective mobile system combined with computer vision, edge computing and machine learning.
 
 Currently, I am particular interested in the following problems:
 * Making mobile vision more efficient with more video compression
