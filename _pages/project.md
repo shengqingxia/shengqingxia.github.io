@@ -28,7 +28,7 @@ Given the fast development in computer vision, we orthogonally enforces more eff
         <source src="../images/vpplus.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <p style="margin-top: 40px;">VPPlus enlarges the configuration space that can be optimized during on-device processing to achieve greater compression for general object detection tasks. It generates proper feedback automatically to guide the joint tuning over more than 8 parameters (e.g. brightness, saturation, etc.).</p>
+    <p style="margin-top: 40px;">VPPlus aims to compress video content live streamed from the device to the edge without scarifying accuracy and timeliness of its video analytics. It enlarges the configuration space that can be optimized during on-device processing to achieve greater compression and generates proper feedback automatically to guide the joint tuning over more than 8 parameters (e.g. brightness, saturation, etc.).</p>
 </div>
 
 
