@@ -34,14 +34,14 @@ Given the fast development in computer vision, we orthogonally enforces more eff
 
 Enhancing DNN Deployment Efficiency in Diverse Use Scenarios
 ----
-When presented with diverse mobile devices performing distinct application tasks in varying scenarios, we tailor the DNN to enhance performance for each scenario using Once-For-All DNN training. This involves training one super network and searching for different sub-networks (subnets) to fit the specific use case.
+For efficient deployment, a DNN is specialized by training to fit the target use scenario (depending on computing power and visual data input). To handle this costly training and meet diverse deployment needs, we tailor the DNN to enhance performance for each scenario using Once-For-All DNN paradigm. This involves training one super network and searching for different sub-networks (subnets) to fit the specific use case.
 <!--Customize DNN Deployment in Diverse Use Scenario-->
 
 #### OPA:One-Predict-All For Efficient Deployment
 <div style="display: flex">
     <img src="../images/ofa_flow.png" alt="Your Image" width="300" style="float: left; margin-right: 10px;">
     <p>Instead of training a specialized DNN for each deployment scenario, we have developed a
-novel approach of using the shallow subnet to test the water. The effectiveness of using a
+novel approach of using one shallow subnet to test the water. The effectiveness of using a
 shallow subnet to accelerate the search of a deep subnet has been validated effective in image
 classification, one showcase application.</p>
 </div>
