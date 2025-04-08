@@ -11,8 +11,18 @@ redirect_from:
 My research aims to build an efficient and effective mobile system combined with computer vision, edge computing and machine learning.
 
 Currently, I am particular interested in the following problems:
+* Autonomous drone delivery to the door
 * Making mobile vision more efficient with more video compression
 * Enhancing DNN deployment efficiency in diverse use scenarios
+
+  
+Autonomous drone delivery to the door
+----
+We present our attempt to tackle the last-hundred-feet problem for autonomous drone delivery. We take a semantic segmentation-based approach to progressively landing towards a convenient and safe drop-off point at all times. We leverage a single-family house structure to streamline and enhance semantic segmentation in the drop-to-door problem context. 
+#### SSS: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics
+We were honored to receive the Best Demo Award at ACM HotMobile’24.
+Check our interactive [demo](https://ddd.cs.purdue.edu) and real-world experiment video on [Youtube](https://www.youtube.com/watch?v=090d-8ZvHyw&list=PLLzN69of2f9bD5ZfPYhDpkAv-Pz2zI7Ac&index=1).
+
 
 Making Mobile Vision More Efficient with More Video Compression
 ----
