@@ -4,8 +4,8 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-[HotMobile'24](https://hotmobile.org/2024/index.php?id=program), *Demo: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics* <br>
-<b>Shengqing Xia</b>, Junpeng Guo and Chunyi Peng. <br>
+[HotMobile'24](https://hotmobile.org/2024/index.php?id=demo), *Demo: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics* <br>
+<b>Shengqing Xia</b>, Junpeng Guo, Peng Chen and Chunyi Peng. <br>
 
 [HotMobile'24](https://hotmobile.org/2024/index.php?id=program), *SSS: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics* <br>
 <b>Shengqing Xia</b>, Junpeng Guo and Chunyi Peng. <br>
