@@ -4,6 +4,9 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+[IROS'25](http://iros25.org/), *RSSS: Robust Structural Semantic Segmentation for Autonomous Drone Delivery to Door* <br>
+<b>Shengqing Xia</b>, Jiaxin Du and Chunyi Peng. <br>
+
 [HotMobile'24](https://hotmobile.org/2024/index.php?id=demo), *Demo: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics* <br>
 <b>Shengqing Xia</b>, Junpeng Guo, Peng Chen and Chunyi Peng. <br>
 
