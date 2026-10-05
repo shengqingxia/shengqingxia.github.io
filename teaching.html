@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teaching | Shengqing Xia</title>
+<style>
+:root{
+ --ink:#30383d; --muted:#69767e; --line:#e8ecef; --soft:#f5f9fa;
+ --accent:#19a9c5; --accent2:#8fd7e4; --paper:#fff; --good:#486b87;
+ --warm:#607d86; --gray:#aeb5bf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+nav{border-bottom:1px solid var(--line);display:flex;align-items:center;background:#fff}
+nav .wrap{width:100%;display:flex;align-items:center;gap:34px;padding-top:22px;padding-bottom:22px}
+.brand{font-family:inherit;font-size:16px;font-weight:750;text-decoration:none;color:var(--ink);margin-right:auto}
+.navlinks{display:flex;gap:34px;font-size:16px;color:#5e6870;font-weight:550}
+.navlinks a{text-decoration:none}
+.hero{padding:78px 0 56px}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:750;color:var(--accent)}
+h1,h2{font-family:inherit;font-weight:650}
+h1{font-size:48px;line-height:1.12;margin:8px 0 18px}
+.hero p{font-size:19px;max-width:760px;color:var(--muted);margin:0}
+section{padding:54px 0;border-top:1px solid var(--line)}
+h2{font-size:34px;margin:0 0 12px}
+.section-intro{max-width:760px;color:var(--muted);margin:0 0 30px}
+.award{display:grid;grid-template-columns:110px 1fr;gap:24px;align-items:center;background:var(--soft);padding:26px;border-radius:18px}
+.medal{width:92px;height:92px;border-radius:50%;border:1px solid #d8c39e;display:grid;place-items:center;font-family:inherit;font-size:30px;color:var(--accent);background:#fff}
+.award h3{margin:0 0 3px;font-size:20px}.award p{margin:3px 0;color:var(--muted)}
+.award a{display:inline-block;margin-top:8px;font-size:13px}
+.table{border-top:1px solid var(--line)}
+.tr{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:18px;padding:15px 4px;border-bottom:1px solid var(--line)}
+.th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.feedback-head{display:flex;justify-content:space-between;gap:24px;align-items:end}
+.feedback-head .big{font-family:inherit;font-size:27px;font-weight:600;max-width:520px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.stat{padding:20px;border:1px solid var(--line);border-radius:15px}
+.stat strong{display:block;font:700 32px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;margin-bottom:7px}.stat span{font-size:13px;color:var(--muted)}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chart{border:1px solid var(--line);border-radius:16px;padding:22px}
+.chart h3{margin:0;font-size:17px}.chart .sub{font-size:12px;color:var(--muted);margin:3px 0 22px}
+.linechart{height:230px;position:relative;margin:4px 4px 0}
+.gridline{position:absolute;left:36px;right:5px;border-top:1px solid #eceef2}
+.ylabel{position:absolute;left:0;transform:translateY(-50%);font-size:11px;color:var(--muted)}
+.poly{position:absolute;left:36px;right:5px;top:0;bottom:30px}
+.poly svg{width:100%;height:100%;overflow:visible}
+.xlabels{position:absolute;left:36px;right:5px;bottom:0;display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.legend{font-size:12px;color:var(--muted);margin-top:10px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:6px}
+.assignment{margin-top:18px;border:1px solid var(--line);border-radius:16px;padding:22px}
+.barrow{display:grid;grid-template-columns:95px 1fr 55px;gap:12px;align-items:center;margin:13px 0}
+.track{height:12px;background:#eef0f3;border-radius:999px;overflow:hidden}.fill{height:100%;background:var(--good);border-radius:999px}
+.small{font-size:12px;color:var(--muted)}
+.quote-note{margin-top:20px;padding:18px 20px;background:var(--soft);border-radius:14px;color:#4f5968}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.photo{margin:0}.photo img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;display:block}
+.photo figcaption{font-size:13px;color:var(--muted);margin-top:9px}
+.community{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.community img{width:100%;height:330px;object-fit:cover;border-radius:14px}
+.community h3{margin:12px 0 3px;font-size:16px}.community p{font-size:13px;color:var(--muted);margin:0}
+footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:760px){
+ .navlinks{display:none} h1{font-size:44px}.award{grid-template-columns:1fr}.medal{width:74px;height:74px}
+ .stats,.charts,.gallery,.community{grid-template-columns:1fr}.tr{grid-template-columns:1fr}.th{display:none}
+ .feedback-head{display:block}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="index.html">Shengqing Xia</a><div class="navlinks"><a href="projects.html">Projects</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kicker">Teaching</div>
+<h1>Teaching through clarity,<br>feedback, and connection.</h1>
+<p>I aim to make computing concepts accessible by connecting technical foundations with concrete systems and real-world applications. I also use recurring student feedback to refine how I communicate, pace material, and design assignments.</p>
+</div></header>
+
+<section><div class="wrap">
+<div class="kicker">Recognition</div><h2>Teaching Recognition</h2>
+<div class="award">
+<div class="medal">’26</div>
+<div><h3>Purdue University Teaching Academy — Graduate Teaching Award</h3>
+<p>In recognition of outstanding contributions to teaching and learning · Computer Science · April 22, 2026</p>
+<a href="assets/graduate_teaching_award.pdf" target="_blank">View award certificate →</a></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<div class="kicker">Experience</div><h2>Teaching Experience</h2>
+<p class="section-intro">A compact record of formal teaching and instructional roles.</p>
+<div class="table">
+<div class="tr th"><div>Course</div><div>Role</div><div>Term</div></div>
+<div class="tr"><div><strong>CS 422 · Computer Networks</strong></div><div>Teaching Fellow / Teaching Assistant</div><div>2025–2026</div></div>
+
+</div>
+</div></section>
+
+<section id="feedback"><div class="wrap">
+<div class="kicker">Computer Networks</div>
+<div class="feedback-head"><div><h2>Listening → Adapting → Improving</h2><p class="section-intro">Five rounds of anonymous feedback were collected throughout the course and used to refine lecture pacing, communication, and assignment design.</p></div><div class="big">Repeated feedback made improvement part of the course design.</div></div>
+
+<div class="stats">
+<div class="stat"><strong>5</strong><span>feedback rounds across the semester</span></div>
+<div class="stat"><strong>64% → 82%</strong><span>“So far, so good” on course pace, Feedback 1 → 5</span></div>
+<div class="stat"><strong>77% → 86%</strong><span>“So far, so good” on instructor communication, Feedback 2 → 5</span></div>
+</div>
+
+<div class="charts">
+<div class="chart">
+<h3>Course pace</h3><div class="sub">Share selecting “So far, so good” · Feedback 1–5</div>
+<div class="linechart">
+<div class="gridline" style="top:10%"></div><span class="ylabel" style="top:10%">100%</span>
+<div class="gridline" style="top:50%"></div><span class="ylabel" style="top:50%">80%</span>
+<div class="gridline" style="top:90%"></div><span class="ylabel" style="top:90%">60%</span>
+<div class="poly"><svg viewBox="0 0 400 180" preserveAspectRatio="none">
+<polyline points="0,161 100,78 200,47 300,81 400,79" fill="none" stroke="#486b87" stroke-width="3"/>
+<g fill="#486b87"><circle cx="0" cy="161" r="5"/><circle cx="100" cy="78" r="5"/><circle cx="200" cy="47" r="5"/><circle cx="300" cy="81" r="5"/><circle cx="400" cy="79" r="5"/></g>
+</svg></div><div class="xlabels"><span>F1</span><span>F2</span><span>F3</span><span>F4</span><span>F5</span></div>
+</div>
+<div class="legend"><span class="dot"></span>64.3% · 82.7% · 89.6% · 82.0% · 82.4%</div>
+</div>
+
+<div class="chart">
+<h3>Instructor communication</h3><div class="sub">Share selecting “So far, so good” · Feedback 2–5</div>
+<div class="linechart">
+<div class="gridline" style="top:10%"></div><span class="ylabel" style="top:10%">100%</span>
+<div class="gridline" style="top:50%"></div><span class="ylabel" style="top:50%">80%</span>
+<div class="gridline" style="top:90%"></div><span class="ylabel" style="top:90%">60%</span>
+<div class="poly"><svg viewBox="0 0 400 180" preserveAspectRatio="none">
+<polyline points="0,103 133,61 266,74 400,64" fill="none" stroke="#486b87" stroke-width="3"/>
+<g fill="#486b87"><circle cx="0" cy="103" r="5"/><circle cx="133" cy="61" r="5"/><circle cx="266" cy="74" r="5"/><circle cx="400" cy="64" r="5"/></g>
+</svg></div><div class="xlabels"><span>F2</span><span>F3</span><span>F4</span><span>F5</span></div>
+</div>
+<div class="legend"><span class="dot"></span>76.9% · 87.2% · 84.0% · 86.3%</div>
+</div>
+</div>
+
+<div class="assignment">
+<h3>Were revised assignments easier to follow?</h3>
+<div class="small">Share selecting “Improved (easier to follow)” in each feedback round that asked this question.</div>
+<div class="barrow"><div>Feedback 2</div><div class="track"><div class="fill" style="width:54%"></div></div><div>54%</div></div>
+<div class="barrow"><div>Feedback 3</div><div class="track"><div class="fill" style="width:58%"></div></div><div>58%</div></div>
+<div class="barrow"><div>Feedback 4</div><div class="track"><div class="fill" style="width:64%"></div></div><div>64%</div></div>
+<div class="barrow"><div>Feedback 5</div><div class="track"><div class="fill" style="width:49%"></div></div><div>49%</div></div>
+<p class="small">In Feedback 5, an additional 35% reported “Unchanged (fine with old assignments),” so roughly 84% either perceived improvement or already considered the assignments satisfactory.</p>
+</div>
+
+<div class="quote-note"><strong>Continuous improvement.</strong> I use recurring anonymous feedback to identify where students need clearer explanations, better pacing, or more accessible assignments, and incorporate those observations into subsequent course materials.</div>
+</div></section>
+
+<section id="lectures"><div class="wrap">
+<div class="kicker">Beyond formal course roles</div><h2>Invited & Guest Lectures</h2>
+<p class="section-intro">Invited classroom talks connect my research in autonomous systems and computing with undergraduate learning.</p>
+<div class="gallery">
+<figure class="photo"><img src="assets/guest_lecture_cs197.jpg" alt="Guest lecture in a Purdue classroom"><figcaption><strong>CS 197 · Freshman Honors Seminar</strong><br>Invited/guest lecture at Purdue University.</figcaption></figure>
+<figure class="photo"><img src="assets/guest_lecture_cs390.jpg" alt="Guest lecture in a Purdue classroom"><figcaption><strong>CS 39000-ARC · AI, Robotics, & Community</strong><br>Invited/guest lecture at Purdue University.</figcaption></figure>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">Community</div><h2>Student Connection</h2>
+<p class="section-intro">Small moments outside formal instruction also help create a welcoming learning environment.</p>
+<div class="community">
+<div><img src="assets/student_gift.jpg" alt="A thoughtful student gift and handwritten note"><h3>A thoughtful note from a student</h3><p>A personal reminder of the relationships that can grow through teaching and mentorship.</p></div>
+<div><img src="assets/class_celebration.jpg" alt="Cakes shared with students"><h3>Celebrating together</h3><p>Sharing an end-of-semester moment with students.</p></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Shengqing Xia · Purdue University</div></footer>
+</body>
+</html>
