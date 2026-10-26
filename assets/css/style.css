@@ -9,3 +9,318 @@
   display: block;
 }
 .kicker{color:#159bb5;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem}h1{font-size:2.5rem;line-height:1.15}h2{margin-top:3rem}.lead{font-size:1.17rem}.muted{color:#69767e}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #e4e9ec;border-radius:13px;padding:21px}.pub{padding:17px 0;border-bottom:1px solid #e8ecef}.tag{background:#f2f7f8;padding:3px 7px;border-radius:5px;font-size:.78rem;font-weight:700}.placeholder{min-height:180px;border:1px dashed #bbc7cc;border-radius:12px;display:grid;place-items:center;text-align:center;color:#748188;padding:20px}.award{border-left:4px solid #19a9c5;padding-left:18px}.note{background:#f5f9fa;padding:18px;border-radius:10px}footer{border-top:1px solid #e8ecef;padding:28px;text-align:center;color:#748188}@media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.nav{flex-wrap:wrap;gap:14px}.brand{width:100%}}
+
+/* =========================================================
+   Research Trajectory
+   ========================================================= */
+
+.research-map{
+  margin:42px 0 58px;
+}
+
+.trajectory{
+  margin-top:22px;
+  padding:34px 40px 40px;
+  border:1px solid #e4e9ec;
+  border-radius:16px;
+  background:#fff;
+  text-align:center;
+}
+
+/* Common nodes */
+.research-node{
+  display:inline-block;
+  min-width:180px;
+  max-width:280px;
+  padding:11px 20px;
+  border:1px solid #cfdadd;
+  border-radius:10px;
+  background:#fff;
+  font-weight:700;
+}
+
+.research-node span,
+.research-node small{
+  display:block;
+  margin-top:4px;
+  color:#69767e;
+  font-size:.76rem;
+  line-height:1.4;
+  font-weight:500;
+}
+
+.research-node.secondary{
+  border-style:dashed;
+}
+
+.connector{
+  width:1px;
+  height:25px;
+  margin:auto;
+  background:#c5d0d4;
+}
+
+/* Efficient vision system foundation */
+.system-foundation{
+  max-width:700px;
+  margin:0 auto;
+  padding:22px 28px 25px;
+  background:#f7fafb;
+  border-radius:14px;
+}
+
+.system-foundation h3{
+  margin:0 0 16px;
+  color:#30383d;
+  font-size:1rem;
+}
+
+.system-projects{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.system-node{
+  width:100%;
+  max-width:none;
+  background:#fff;
+}
+
+.foundation-connector{
+  position:relative;
+  width:1px;
+  height:58px;
+  margin:auto;
+  background:#c5d0d4;
+}
+
+.foundation-connector span{
+  position:absolute;
+  left:14px;
+  top:17px;
+  width:190px;
+  text-align:left;
+  color:#8a969c;
+  font-size:.72rem;
+  font-weight:600;
+}
+
+/* UAV perception root */
+.research-node.root{
+  min-width:240px;
+  padding:14px 30px;
+  border:2px solid #19a9c5;
+  background:#f2f9fa;
+  font-size:1.05rem;
+}
+
+/* Application area */
+.application-row{
+  display:grid;
+  grid-template-columns:minmax(0,3fr) minmax(190px,1fr);
+  gap:45px;
+  align-items:start;
+  margin-top:0;
+}
+
+.main-research-line,
+.other-application{
+  text-align:center;
+}
+
+.showcase-label{
+  display:inline-block;
+  color:#748188;
+  font-size:.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+.showcase-node{
+  min-width:220px;
+  padding:14px 28px;
+  border-color:#19a9c5;
+}
+
+.application-node{
+  min-width:180px;
+  padding:14px 20px;
+  background:#f7fafb;
+}
+
+/* Explicit SSS -> two-branch connector */
+.sss-branch-connector{
+  position:relative;
+  height:45px;
+  margin:0;
+}
+
+.sss-stem{
+  position:absolute;
+  top:0;
+  left:50%;
+  width:1px;
+  height:25px;
+  background:#c5d0d4;
+}
+
+.sss-horizontal{
+  position:absolute;
+  top:24px;
+  left:25%;
+  right:25%;
+  height:1px;
+  background:#c5d0d4;
+}
+
+/* Semantic / depth branches */
+.trajectory-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  margin:0;
+}
+
+.trajectory-branch{
+  position:relative;
+  text-align:center;
+}
+
+.branch-top-line{
+  width:1px;
+  height:22px;
+  margin:-21px auto 8px;
+  background:#c5d0d4;
+}
+
+.question{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 11px;
+  border-radius:20px;
+  background:#f2f7f8;
+  color:#69767e;
+  font-size:.78rem;
+  font-weight:700;
+}
+
+.trajectory-branch h3{
+  margin:4px 0 0;
+  color:#159bb5;
+  font-size:1rem;
+}
+
+/* Mobile */
+@media(max-width:760px){
+  .trajectory{
+    padding:25px 15px;
+  }
+
+  .system-projects,
+  .application-row,
+  .trajectory-split{
+    grid-template-columns:1fr;
+  }
+
+  .system-projects{
+    gap:12px;
+  }
+
+  .foundation-connector span{
+    display:none;
+  }
+
+  .application-row{
+    gap:45px;
+  }
+
+  .trajectory-split{
+    gap:35px;
+  }
+
+  .sss-branch-connector{
+    height:25px;
+  }
+
+  .sss-horizontal{
+    display:none;
+  }
+
+  .sss-stem{
+    height:25px;
+  }
+
+  .branch-top-line{
+    display:none;
+  }
+}
+/* =========================================================
+   UAV Perception -> SSS / A4AWD application split
+   ========================================================= */
+
+.application-row{
+  display:grid;
+  grid-template-columns:minmax(0,3fr) minmax(190px,1fr);
+  gap:45px;
+  align-items:start;
+  margin-top:25px;
+  position:relative;
+}
+
+/* Horizontal line connecting SSS application and A4AWD */
+.application-row::before{
+  content:"";
+  position:absolute;
+
+  top:-25px;
+
+  /* centers of the two grid columns */
+  left:37.5%;
+  right:12.5%;
+
+  height:1px;
+  background:#c5d0d4;
+}
+
+/* Vertical line from Autonomous UAV Perception
+   down to the horizontal application line */
+.application-row::after{
+  content:"";
+  position:absolute;
+
+  top:-50px;
+  left:50%;
+
+  width:1px;
+  height:25px;
+
+  background:#c5d0d4;
+}
+
+/* Connect horizontal line down to Showcase Application */
+.main-research-line::before{
+  content:"";
+  display:block;
+
+  width:1px;
+  height:25px;
+
+  margin:-25px auto 0;
+
+  background:#c5d0d4;
+}
+
+/* Connect horizontal line down to Other Application */
+.other-application::before{
+  content:"";
+  display:block;
+
+  width:1px;
+  height:25px;
+
+  margin:-25px auto 0;
+
+  background:#c5d0d4;
+}

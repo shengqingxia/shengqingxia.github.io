@@ -1,0 +1,596 @@
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#30383d;line-height:1.65}a{color:#19a9c5;text-decoration:none}header{border-bottom:1px solid #e8ecef}.nav{max-width:1180px;margin:auto;padding:22px 28px;display:flex;gap:34px}.brand{font-weight:750;color:#30383d;margin-right:auto}.wrap{max-width:1180px;margin:auto;padding:58px 28px 80px}.hero{display:grid;grid-template-columns:240px 1fr;gap:65px}
+.avatar {
+  width: 210px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 110px;
+  border: 1px solid #ddd;
+  display: block;
+}
+.kicker{color:#159bb5;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem}h1{font-size:2.5rem;line-height:1.15}h2{margin-top:3rem}.lead{font-size:1.17rem}.muted{color:#69767e}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid #e4e9ec;border-radius:13px;padding:21px}.pub{padding:17px 0;border-bottom:1px solid #e8ecef}.tag{background:#f2f7f8;padding:3px 7px;border-radius:5px;font-size:.78rem;font-weight:700}.placeholder{min-height:180px;border:1px dashed #bbc7cc;border-radius:12px;display:grid;place-items:center;text-align:center;color:#748188;padding:20px}.award{border-left:4px solid #19a9c5;padding-left:18px}.note{background:#f5f9fa;padding:18px;border-radius:10px}footer{border-top:1px solid #e8ecef;padding:28px;text-align:center;color:#748188}@media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.nav{flex-wrap:wrap;gap:14px}.brand{width:100%}}
+.research-map{
+  margin:45px 0 60px;
+}
+
+.trajectory{
+  margin-top:25px;
+  padding:32px;
+  border:1px solid #e4e9ec;
+  border-radius:16px;
+  background:#fff;
+}
+
+.trajectory-main{
+  text-align:center;
+}
+
+.research-node{
+  display:inline-block;
+  min-width:150px;
+  padding:11px 20px;
+  border:1px solid #cfdadd;
+  border-radius:10px;
+  background:#fff;
+  font-weight:700;
+}
+
+.research-node.root{
+  background:#f2f9fa;
+  border:2px solid #19a9c5;
+  color:#30383d;
+  font-size:1.05rem;
+  padding:14px 28px;
+}
+
+.research-node.secondary{
+  border-style:dashed;
+}
+
+.research-node small{
+  display:block;
+  margin-top:3px;
+  color:#748188;
+  font-size:.72rem;
+  font-weight:500;
+}
+
+.branch-line{
+  width:2px;
+  height:30px;
+  background:#cfdadd;
+  margin:auto;
+}
+
+.research-branches{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  position:relative;
+}
+
+.research-branches::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:25%;
+  right:25%;
+  height:1px;
+  background:#cfdadd;
+}
+
+.research-branch{
+  padding-top:25px;
+}
+
+.research-branch h3{
+  color:#159bb5;
+  margin:0 0 18px;
+  font-size:1rem;
+}
+
+.arrow{
+  color:#9aa7ad;
+  font-size:22px;
+  line-height:30px;
+}
+
+.split{
+  margin-top:0;
+}
+
+.supporting-lines{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:38px;
+  padding-top:28px;
+  border-top:1px solid #e8ecef;
+}
+
+.support-card{
+  background:#f7fafb;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+}
+
+.support-card h3{
+  margin:0 0 12px;
+  font-size:1rem;
+}
+
+.support-card p{
+  margin:10px 0 0;
+  color:#69767e;
+  font-size:.88rem;
+}
+
+.mini-flow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+}
+
+.mini-arrow{
+  color:#19a9c5;
+}
+
+@media(max-width:760px){
+  .trajectory{
+    padding:22px 15px;
+  }
+
+  .research-branches,
+  .supporting-lines{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .research-branches::before{
+    display:none;
+  }
+
+  .research-branch{
+    padding-top:10px;
+  }
+}
+/* ===== Research Trajectory ===== */
+
+.research-map{
+  margin:42px 0 58px;
+}
+
+.trajectory{
+  margin-top:22px;
+  padding:34px 40px 38px;
+  border:1px solid #e4e9ec;
+  border-radius:16px;
+  background:#fff;
+  text-align:center;
+}
+
+/* Nodes */
+
+.research-node{
+  display:inline-block;
+  min-width:170px;
+  padding:11px 20px;
+  border:1px solid #cfdadd;
+  border-radius:10px;
+  background:#fff;
+  font-weight:700;
+}
+
+.research-node.root{
+  padding:14px 30px;
+  border:2px solid #19a9c5;
+  background:#f2f9fa;
+  font-size:1.05rem;
+}
+
+.research-node span,
+.research-node small{
+  display:block;
+  margin-top:3px;
+  color:#69767e;
+  font-size:.78rem;
+  font-weight:500;
+}
+
+.showcase-node{
+  min-width:210px;
+  padding:14px 28px;
+}
+
+/* Vertical connectors */
+
+.connector{
+  width:1px;
+  height:25px;
+  margin:auto;
+  background:#c5d0d4;
+}
+
+/* Showcase label */
+
+.showcase-label{
+  display:inline-block;
+  color:#748188;
+  font-size:.78rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+/* Two main research directions */
+
+.trajectory-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  position:relative;
+  margin-top:48px;
+}
+
+/* Horizontal line coming from SSS */
+
+.trajectory-split::before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:25%;
+  right:25%;
+  height:1px;
+  background:#c5d0d4;
+}
+
+/* Vertical line from SSS to horizontal split */
+
+.trajectory-split::after{
+  content:"";
+  position:absolute;
+  top:-48px;
+  left:50%;
+  width:1px;
+  height:23px;
+  background:#c5d0d4;
+}
+
+.trajectory-branch{
+  position:relative;
+}
+
+/* Vertical lines from horizontal split to branches */
+
+.trajectory-branch::before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:50%;
+  width:1px;
+  height:25px;
+  background:#c5d0d4;
+}
+
+/* Human-readable research questions */
+
+.question{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 11px;
+  border-radius:20px;
+  background:#f2f7f8;
+  color:#69767e;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.trajectory-branch h3{
+  margin:4px 0 0;
+  color:#159bb5;
+  font-size:1rem;
+}
+
+.research-node.secondary{
+  border-style:dashed;
+}
+
+/* Mobile */
+
+@media(max-width:760px){
+
+  .trajectory{
+    padding:26px 16px;
+  }
+
+  .trajectory-split{
+    grid-template-columns:1fr;
+    gap:42px;
+    margin-top:38px;
+  }
+
+  .trajectory-split::before,
+  .trajectory-split::after,
+  .trajectory-branch::before{
+    display:none;
+  }
+
+  .trajectory-branch{
+    padding-top:10px;
+  }
+
+  .research-node{
+    min-width:160px;
+  }
+}
+/* =========================================================
+   Research Trajectory
+   ========================================================= */
+
+.research-map{
+  margin:42px 0 58px;
+}
+
+.trajectory{
+  margin-top:22px;
+  padding:34px 40px 40px;
+  border:1px solid #e4e9ec;
+  border-radius:16px;
+  background:#fff;
+  text-align:center;
+}
+
+
+/* ---------- Common Nodes ---------- */
+
+.research-node{
+  display:inline-block;
+  min-width:180px;
+  max-width:270px;
+  padding:11px 20px;
+  border:1px solid #cfdadd;
+  border-radius:10px;
+  background:#fff;
+  font-weight:700;
+}
+
+.research-node span,
+.research-node small{
+  display:block;
+  margin-top:4px;
+  color:#69767e;
+  font-size:.76rem;
+  line-height:1.4;
+  font-weight:500;
+}
+
+
+/* =========================================================
+   Efficient Vision System Foundation
+   ========================================================= */
+
+.system-foundation{
+  max-width:700px;
+  margin:0 auto;
+  padding:22px 28px 25px;
+  background:#f7fafb;
+  border-radius:14px;
+}
+
+.system-foundation h3{
+  margin:0 0 16px;
+  color:#30383d;
+  font-size:1rem;
+}
+
+.system-projects{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.system-node{
+  width:100%;
+  max-width:none;
+  background:#fff;
+}
+
+.foundation-connector{
+  position:relative;
+  width:1px;
+  height:58px;
+  margin:auto;
+  background:#c5d0d4;
+}
+
+.foundation-connector span{
+  position:absolute;
+  left:14px;
+  top:17px;
+  width:190px;
+  text-align:left;
+  color:#8a969c;
+  font-size:.72rem;
+  font-weight:600;
+}
+
+
+/* =========================================================
+   Autonomous UAV Perception Root
+   ========================================================= */
+
+.research-node.root{
+  min-width:240px;
+  padding:14px 30px;
+  border:2px solid #19a9c5;
+  background:#f2f9fa;
+  font-size:1.05rem;
+}
+
+.connector{
+  width:1px;
+  height:25px;
+  margin:auto;
+  background:#c5d0d4;
+}
+
+
+/* =========================================================
+   Applications
+   ========================================================= */
+
+.application-row{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+  max-width:760px;
+  margin:0 auto;
+  align-items:start;
+}
+
+.application-item{
+  text-align:center;
+}
+
+.showcase-label{
+  display:inline-block;
+  color:#748188;
+  font-size:.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+.showcase-node{
+  min-width:220px;
+  padding:14px 28px;
+  border-color:#19a9c5;
+}
+
+.application-node{
+  min-width:180px;
+  padding:14px 20px;
+  background:#f7fafb;
+}
+
+
+/* =========================================================
+   Semantic / Geometry Split
+   ========================================================= */
+
+.trajectory-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  position:relative;
+  max-width:800px;
+  margin:48px auto 0;
+}
+
+/* Horizontal split line */
+
+/* horizontal branching line below SSS */
+.trajectory-split::before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:25%;
+  right:25%;
+  height:1px;
+  background:#c5d0d4;
+}
+
+/* vertical line from SSS down to the horizontal branching line */
+.trajectory-split::after{
+  content:"";
+  position:absolute;
+  top:-48px;
+  left:50%;
+  width:1px;
+  height:24px;
+  background:#c5d0d4;
+}
+
+.trajectory-branch{
+  position:relative;
+}
+
+.trajectory-branch::before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:50%;
+  width:1px;
+  height:25px;
+  background:#c5d0d4;
+}
+
+.question{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 11px;
+  border-radius:20px;
+  background:#f2f7f8;
+  color:#69767e;
+  font-size:.78rem;
+  font-weight:700;
+}
+
+.trajectory-branch h3{
+  margin:4px 0 0;
+  color:#159bb5;
+  font-size:1rem;
+}
+
+.research-node.secondary{
+  border-style:dashed;
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media(max-width:760px){
+
+  .trajectory{
+    padding:25px 15px;
+  }
+
+  .system-projects,
+  .application-row,
+  .trajectory-split{
+    grid-template-columns:1fr;
+  }
+
+  .system-projects{
+    gap:12px;
+  }
+
+  .foundation-connector span{
+    display:none;
+  }
+
+  .application-row{
+    gap:28px;
+  }
+
+  .trajectory-split{
+    gap:42px;
+    margin-top:40px;
+  }
+
+  .trajectory-split::before,
+  .trajectory-split::after,
+  .trajectory-branch::before{
+    display:none;
+  }
+
+  .trajectory-branch{
+    padding-top:10px;
+  }
+}
