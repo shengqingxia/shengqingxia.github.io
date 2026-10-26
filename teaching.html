@@ -29,7 +29,7 @@ section{padding:54px 0;border-top:1px solid var(--line)}
 h2{font-size:34px;margin:0 0 12px}
 .section-intro{max-width:760px;color:var(--muted);margin:0 0 30px}
 .award{display:grid;grid-template-columns:110px 1fr;gap:24px;align-items:center;background:var(--soft);padding:26px;border-radius:18px}
-.medal{width:92px;height:92px;border-radius:50%;border:1px solid #d8c39e;display:grid;place-items:center;font-family:inherit;font-size:30px;color:var(--accent);background:#fff}
+.award-img{width:92px;height:auto;display:block;border-radius:8px}
 .award h3{margin:0 0 3px;font-size:20px}.award p{margin:3px 0;color:var(--muted)}
 .award a{display:inline-block;margin-top:8px;font-size:13px}
 .table{border-top:1px solid var(--line)}
@@ -64,7 +64,7 @@ h2{font-size:34px;margin:0 0 12px}
 .community h3{margin:12px 0 3px;font-size:16px}.community p{font-size:13px;color:var(--muted);margin:0}
 footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media(max-width:760px){
- .navlinks{display:none} h1{font-size:44px}.award{grid-template-columns:1fr}.medal{width:74px;height:74px}
+ .navlinks{display:none} h1{font-size:44px}.award{grid-template-columns:1fr}.award-img{width:92px}
  .stats,.charts,.gallery,.community{grid-template-columns:1fr}.tr{grid-template-columns:1fr}.th{display:none}
  .feedback-head{display:block}
 }
@@ -82,10 +82,9 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
 <section><div class="wrap">
 <div class="kicker">Recognition</div><h2>Teaching Recognition</h2>
 <div class="award">
-<div class="medal">’26</div>
+<img class="award-img" src="assets/teaching_award.png" alt="Purdue University Teaching Academy Graduate Teaching Award">
 <div><h3>Purdue University Teaching Academy — Graduate Teaching Award</h3>
 <p>In recognition of outstanding contributions to teaching and learning · Computer Science · April 22, 2026</p>
-<a href="assets/graduate_teaching_award.pdf" target="_blank">View award certificate →</a></div>
 </div>
 </div></section>
 
@@ -94,8 +93,12 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
 <p class="section-intro">A compact record of formal teaching and instructional roles.</p>
 <div class="table">
 <div class="tr th"><div>Course</div><div>Role</div><div>Term</div></div>
-<div class="tr"><div><strong>CS 422 · Computer Networks</strong></div><div>Teaching Fellow / Teaching Assistant</div><div>2025–2026</div></div>
-
+<div class="tr"><div><strong>CS 422 · Computer Networks</strong></div><div>Instructor</div><div>2025 Fall</div></div>
+<div class="tr"><div><strong>CS 422 · Computer Networks</strong></div><div>Teaching Assistant</div><div>2025 Spring</div></div>
+<div class="tr"><div><strong>CS 242 · Introduction to Data Science</strong></div><div>Teaching Assistant</div><div>2024 Fall</div></div>
+<div class="tr"><div><strong>CS 422 · Introduction to Data Science</strong></div><div>Teaching Assistant</div><div>2022 Fall</div></div>
+<div class="tr"><div><strong>CS 38003 · Python Programming</strong></div><div>Teaching Assistant</div><div>2022 Spring</div></div>
+<div class="tr"><div><strong>CS 490 · Introduction to Data Visualization</strong></div><div>Teaching Assistant</div><div>2021 Fall</div></div>
 </div>
 </div></section>
 
@@ -117,11 +120,11 @@ footer{padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
 <div class="gridline" style="top:50%"></div><span class="ylabel" style="top:50%">80%</span>
 <div class="gridline" style="top:90%"></div><span class="ylabel" style="top:90%">60%</span>
 <div class="poly"><svg viewBox="0 0 400 180" preserveAspectRatio="none">
-<polyline points="0,161 100,78 200,47 300,81 400,79" fill="none" stroke="#486b87" stroke-width="3"/>
-<g fill="#486b87"><circle cx="0" cy="161" r="5"/><circle cx="100" cy="78" r="5"/><circle cx="200" cy="47" r="5"/><circle cx="300" cy="81" r="5"/><circle cx="400" cy="79" r="5"/></g>
+<polyline points="0,161 100,78 200,79, 300,81 400,47" fill="none" stroke="#486b87" stroke-width="3"/>
+<g fill="#486b87"><circle cx="0" cy="161" r="5"/><circle cx="100" cy="78" r="5"/><circle cx="200" cy="79" r="5"/><circle cx="300" cy="81" r="5"/><circle cx="400" cy="47" r="5"/></g>
 </svg></div><div class="xlabels"><span>F1</span><span>F2</span><span>F3</span><span>F4</span><span>F5</span></div>
 </div>
-<div class="legend"><span class="dot"></span>64.3% · 82.7% · 89.6% · 82.0% · 82.4%</div>
+<div class="legend"><span class="dot"></span>64.3% · 82.7% · 82.4% · 82.0% · 89.6%</div>
 </div>
 
 <div class="chart">
