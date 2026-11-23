@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Shengqing Xia · Research, Publications &amp; Teaching</title>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+/* Homepage additions: uses the original assets/css/style.css for site colors and typography. */
+html {scroll-behavior:smooth}
+#research-projects,#teaching {scroll-margin-top:88px}
+#research-projects {margin-top:40px}
+.home-project {display:grid;grid-template-columns:minmax(190px,32%) 1fr;column-gap:24px;align-items:start;padding:20px 0;border-bottom:1px solid rgba(120,120,120,.22);margin:0}
+.home-project > .tag {grid-column:2;grid-row:1;justify-self:start}
+.home-project > h3 {grid-column:2;grid-row:2;margin:3px 0 8px}
+.home-project > img,.home-project > video,.home-project > .project-media {grid-column:1;grid-row:1 / span 8;width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:10px;margin:0}
+.home-project > p,.home-project > b,.home-project > .project-links {grid-column:2;margin:5px 0}
+.home-project .project-media {display:contents}
+.home-project .project-media > img,.home-project .project-media > video {grid-column:1;grid-row:1 / span 8;width:100%;max-width:100%;border-radius:10px}
+.home-project .project-media > div {grid-column:2}
+.home-project .project-media > div p {margin:4px 0 10px}
+.home-project .project-links a {margin-right:16px}
+#teaching {margin-top:40px}
+.teaching-entry {padding:13px 0;border-bottom:1px solid rgba(120,120,120,.22)}
+.teaching-entry strong {display:inline-block;margin-right:12px}
+.teaching-entry p {margin:7px 0 0}
+@media(max-width:700px) {.home-project {display:flex;flex-direction:column;gap:9px}.home-project > img,.home-project > video,.home-project .project-media > img,.home-project .project-media > video {max-height:260px;object-fit:contain}.home-project .project-media {display:contents}.home-project > h3 {order:-2}.home-project > .tag {order:-3}nav.nav {flex-wrap:wrap}}
+
+.resource-links{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:10px!important}.resource-links a{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border:1px solid rgba(120,120,120,.35);border-radius:6px;font-size:.85rem;text-decoration:none;line-height:1.35}.resource-links a:hover{background:rgba(120,120,120,.1)}.resource-links svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.home-project>.resource-links{grid-column:2}.home-project .project-media>div .resource-links{margin-top:10px}</style></head>
+<body>
+<header>
+<nav class="nav">
+<a class="brand" href="index.html">Shengqing Xia</a>
+<a href="#research-projects">Projects</a>
+<a href="#teaching">Teaching</a>
+</nav>
+</header>
+<main class="wrap">
+<section class="hero">
+<div>
+<img alt="Portrait of Shengqing Xia" class="avatar" src="images/IMG_8859.JPG"/>
+<h3>Shengqing Xia</h3>
+<p class="muted">
+          Ph.D. Candidate in Computer Science<br/>
+          Purdue University<br/>
+          West Lafayette, IN
+        </p>
+<p>
+<a href="mailto:xia170@purdue.edu">Email</a> ·
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=FND3VAEAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" rel="noopener noreferrer" target="_blank">Google Scholar</a> ·
+          <a href="assets/cv.pdf" rel="noopener noreferrer" target="_blank">CV</a>
+</p>
+</div>
+<div>
+<div class="kicker">Mobile Computing · Computer Vision · Autonomous Drones</div>
+<h1>Efficient perception systems for autonomous drones in complex, low-altitude environments.</h1>
+<p class="lead">
+          I am a Ph.D. candidate in Computer Science at Purdue University,
+          advised by Prof. Chunyi Peng. My research centers on mobile computing
+          and computer vision, with a focus on efficient mobile vision systems
+          and autonomous aerial systems.
+        </p>
+<p class="lead">
+          Before Purdue, I received an M.S. in Data Science from Columbia University
+          and a B.E. from Wuhan University.
+        </p>
+<p>
+<a href="assets/cv.pdf" rel="noopener noreferrer" target="_blank">
+<strong>Curriculum Vitae →</strong>
+</a>
+</p>
+</div>
+</section>
+<h2>Research Highlights</h2>
+<div class="grid">
+<div class="card">
+<h3>Metric Depth</h3>
+<p>AnchorDepth and Depth4VTOL explore efficient metric depth estimation for real-time aerial navigation and landing.</p>
+</div>
+<div class="card">
+<h3>Robust Perception</h3>
+<p>
+          SSS and RSSS enable delivery-to-door using structural semantic understanding
+          across changing environments, while FollowMe reduces the human effort needed
+          to annotate such cross-environment data.
+        </p>
+</div>
+<div class="card">
+<h3>Mobile Vision</h3>
+<p>OPA and VPPlus explore efficient DNN deployment and video analytics for resource-constrained settings.</p>
+</div>
+</div>
+<section id="research-projects"><h2>Research Projects</h2><p class="muted">Selected projects in semantic understanding, metric geometry, and efficient vision systems. <a href="projects.html">Explore the full research trajectory →</a></p><div class="home-project" style="margin:16px 0">
+<span class="tag">2026</span>
+<h3>AnchorDepth · Fast Metric Depth Estimation with Anchors for Drones</h3>
+<img alt="Overview of AnchorDepth for real-time metric depth estimation" class="project-figure" src="assets/anchordepth_overview.png"/>
+<p>
+    Building on Depth4VTOL, AnchorDepth extends real-time metric depth
+  estimation from vertical flight to more general drone movements.
+  Instead of relying on computationally expensive dense multi-view
+  correspondences, it uses stationary, sufficiently large, and
+  geometrically regular objects as anchors to recover metric scale from
+  relative depth. This enables <b>temporally consistent metric depth
+  estimation in real time</b> across common drone flight scenarios.
+  </p>
+<b>IEEE/RSJ IROS 2026</b>
+<video controls="" preload="metadata">
+<source src="assets/anchordepth_demo.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+  </video>
+<div class="resource-links"><a href="assets/anchordepth_demo.mp4" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="3" width="20" x="2" y="4"></rect><path d="m10 8 6 4-6 4z"></path></svg> Video</a></div></div><div class="home-project" style="margin:16px 0">
+<span class="tag">2026</span>
+<h3>Depth4VTOL · Precise Depth Estimation for Vertical Take-off and Landing UAVs</h3>
+<img alt="Overview of Depth4VTOL for metric depth estimation during UAV vertical take-off and landing" class="project-figure2" src="assets/depth4vtol_overview.png"/>
+<p>
+    Beyond semantic understanding, autonomous drone delivery also requires
+    accurate geometric perception of the surrounding environment.
+    Depth4VTOL focuses on metric depth estimation during vertical take-off
+    and landing over residential houses, where predominantly vertical motion
+    provides limited viewpoint diversity. It exploits local geometric changes
+    induced by vertical motion to recover metric scale and achieves real-time
+    depth estimation at 12.4 fps.
+  </p>
+<b>ACM MobiCom 2026 · ImmerCom Workshop</b>
+</div><div class="home-project" style="margin:16px 0">
+<span class="tag">2026</span>
+<h3>FollowMe · Efficient Image Annotation Across Environments</h3>
+<img alt="Overview of FollowMe for efficient image annotation" class="project-figure" src="assets/followme_overview.png"/>
+<p>
+    Building on our prior work on robust semantic understanding across
+    environments (RSSS), FollowMe focuses on efficient image annotation. It
+    leverages high-quality annotations from one environment to automatically
+    annotate images of the same physical scene under different times,
+    seasons, and weather conditions, requiring only lightweight human review
+    and correction. FollowMe reduces human effort by <b>94%</b> while
+    maintaining an average F1 score of <b>0.9</b>.
+  </p>
+<b>ACM MobiCom 2026 · HumanSys Workshop</b>
+</div><div class="home-project" style="margin:16px 0">
+<span class="tag">2025</span>
+<h3>RSSS · Robust Structural Semantic Segmentation for Autonomous Drone Delivery to Door</h3>
+<img alt="Overview of Robust Structural Semantic Segmentation (RSSS)" class="project-figure" src="assets/rsss_overview.png"/>
+<p>
+    Building on SSS, RSSS improves the robustness of semantic segmentation for autonomous
+    drone delivery across changing seasons, weather, illumination, and
+    other environmental conditions. Its core idea is to
+    <b>“Let Strong Help Weak”</b>: reliable semantic results obtained
+    under favorable conditions are leveraged to refine weaker predictions
+    in adverse environments using the largely invariant structure and
+    spatial layout of houses.
+  </p>
+<b>IEEE/RSJ IROS 2025</b>
+
+<div class="resource-links"><a href="https://www.youtube.com/watch?v=h9zZAIhMD6w&amp;list=PL2du247P7uh8C33j3rgBu-qloBqM7iyjA" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="3" width="20" x="2" y="4"></rect><path d="m10 8 6 4-6 4z"></path></svg> Video</a></div></div><div class="home-project" style="margin:16px 0"><span class="tag">2024</span><h3>SSS · Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics</h3><img alt="Overview of SSS for autonomous drone delivery to the door" class="project-figure" src="assets/sss_overview.png"/>
+<p>We tackle the last-hundred-feet problem for autonomous drone delivery using a semantic segmentation-based approach that progressively guides the drone toward a convenient and safe drop-off point. We leverage single-family house structure to streamline and enhance semantic understanding in the drop-to-door setting.</p>
+<p><b>We were honored to receive the Best Demo Award at ACM HotMobile 2024.</b></p>
+<div class="resource-links"><a href="https://ddd.cs.purdue.edu" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="15" rx="2" width="20" x="2" y="3"></rect><path d="M8 22h8m-4-4v4m-2-13 5 3-5 3z"></path></svg> Demo</a><a href="https://www.youtube.com/watch?v=090d-8ZvHyw&amp;list=PLLzN69of2f9bD5ZfPYhDpkAv-Pz2zI7Ac&amp;index=1" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="3" width="20" x="2" y="4"></rect><path d="m10 8 6 4-6 4z"></path></svg> Video</a></div></div><div class="home-project" style="margin:16px 0">
+<h3>A4AWD · Aerial Weed Detection over Residential Lawns</h3>
+<div class="project-media">
+<img alt="Overview of A4AWD for UAV-based weed detection over residential lawns" src="assets/a4awd_overview.png"/>
+<div>
+<p>A4AWD targets UAV-based weed detection over residential lawns, where weeds appear extremely small and visually similar to surrounding turfgrass. It introduces a lightweight inference-time augmentation tailored for this challenging green-on-green aerial setting and was evaluated over 165 residential houses.</p>
+<b>ICUAS 2026</b>
+</div>
+</div>
+</div><div class="home-project" style="margin:16px 0"><h3>OPA · One-Predict-All for Efficient Deployment</h3><div class="project-media">
+<img alt="OPA workflow" src="assets/ofa_flow.png"/><div><p>Instead of training a specialized DNN for each deployment scenario, OPA uses one shallow subnet to test the water. The shallow subnet helps accelerate the search for an appropriate deep subnet, enabling more efficient DNN deployment across diverse use scenarios.</p><b>IEEE INFOCOM 2023</b></div></div></div><div class="home-project" style="margin:16px 0"><h3>VPPlus · Video Processing for Live Video Analytics at the Edge</h3><div class="project-media">
+<video controls="" preload="metadata"><source src="assets/vpplus.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+<div><p>VPPlus compresses video content live streamed from the device to the edge while preserving the accuracy and timeliness of video analytics. It enlarges the configuration space available for on-device processing and automatically generates feedback to guide joint tuning across more than eight parameters, such as brightness and saturation.</p><b>IEEE/ACM IWQoS 2022</b><div class="resource-links"><a href="assets/vpplus.mp4" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="16" rx="3" width="20" x="2" y="4"></rect><path d="m10 8 6 4-6 4z"></path></svg> Video</a></div></div></div></div></section><section id="teaching"><h2>Teaching Experience</h2>
+<div class="teaching-entry"><strong>Instructor</strong><span class="muted">Purdue University · Fall 2025</span><p>CS 422 — Computer Networks</p></div>
+<div class="teaching-entry"><strong>Teaching Assistant</strong><span class="muted">Purdue University · 2021–2025</span><p>CS 422 — Computer Networks (Spring 2025); CS 242 — Introduction to Data Science (Fall 2024, Fall 2022); CS 38003 — Python Programming (Spring 2022); CS 490 — Introduction to Data Visualization (Fall 2021).</p></div>
+<div class="teaching-entry"><strong>Invited Guest Lecturer</strong><span class="muted">Purdue University · Fall 2025</span><p>CS 197 — Freshman Honors Seminar; CS 39000-ARC — AI, Robotics, &amp; Community.</p></div>
+</section><h2>Selected Recognition</h2>
+<div class="award">
+<b>Purdue Graduate Teaching Award</b> · 2026<br/>
+<b>ACM HotMobile Best Demo Award</b> · 2024<br/>
+      IEEE RAS Travel Grant · 2026   ·   MobiCom N2Women Student Travel Grant · 2026
+    </div>
+</main>
+<footer>© 2026 Shengqing Xia · Purdue University</footer>
+</body>
+</html>
