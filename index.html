@@ -27,6 +27,10 @@
 }
 .job-market strong { color: #24577e; }
 
+/* Emphasize venues in black; underline the author name. */
+#selected-publications .pub h3 { font-weight: 500; color: inherit; }
+#selected-publications .pub .venue { font-weight: 700; color: #111; }
+#selected-publications .pub .my-name { font-weight: normal; text-decoration: underline; text-underline-offset: 2px; }
 #selected-publications .award-note { margin-top: 7px; font-weight: 700; color: #24577e; }
 </style><script>
 // Prevent a browser refresh from restoring the previous scroll position.
@@ -40,12 +44,61 @@ window.addEventListener('pageshow', function () {
   }
 });
 </script>
-</head>
+<style>
+/* Compact, responsive homepage layout */
+main.wrap { padding-top: 24px; }
+.hero {
+  display: grid !important;
+  grid-template-columns: minmax(175px, 215px) minmax(0, 1fr) !important;
+  gap: 30px !important;
+  align-items: start !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 18px 0 0 !important;
+  margin: 0 !important;
+}
+.hero > div { min-width: 0; }
+.hero .avatar {
+  display: block;
+  width: 165px !important;
+  height: 205px !important;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 46% / 39%;
+  margin-bottom: 12px;
+}
+.hero h3 { margin: 10px 0 8px; }
+.hero .muted { margin: 6px 0 12px; line-height: 1.55; }
+.hero .kicker { margin: 0 0 12px; }
+.hero .job-market { margin: 12px 0 20px; padding: 10px 14px; }
+.hero p.lead { margin: 0 0 14px; line-height: 1.65; }
+.hero p { margin-bottom: 12px; }
+#selected-publications {
+  margin-top: 20px !important;
+  padding-top: 0 !important;
+}
+#selected-publications > h2:first-child { margin: 0 0 12px; }
+#selected-publications .pub { padding: 11px 0 13px; }
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .hero .avatar { width: 130px !important; height: 160px !important; }
+  #selected-publications { margin-top: 18px !important; }
+}
+</style><style>
+/* Inline publication resources, next to the venue. */
+#selected-publications .pub .venue { color: #111; }
+#selected-publications .pub .pub-links { display: inline; margin-left: 5px; font-weight: 400; }
+#selected-publications .pub .pub-links a { display: inline-block; font-size: .88rem; font-weight: 400; color: #345c78; text-decoration: none; margin: 0 5px 2px 0; padding: 1px 6px; border: 1px solid rgba(80,100,120,.27); border-radius: 4px; white-space: nowrap; }
+#selected-publications .pub .pub-links a:hover { text-decoration: underline; background: rgba(80,100,120,.07); }
+</style><style>
+/* Bold only the two IROS venues and INFOCOM. */
+#selected-publications .pub .venue { font-weight: 400 !important; color: #111; }
+#selected-publications .pub .venue.venue-highlight { font-weight: 700 !important; }
+</style></head>
 <body>
 <header>
 <nav class="nav">
 <a class="brand" href="index.html">Shengqing Xia</a>
-
 </nav>
 </header>
 <main class="wrap">
@@ -66,28 +119,20 @@ window.addEventListener('pageshow', function () {
 </div>
 <div>
 <div class="kicker">Computer Vision · Robotics · Autonomous Drones</div>
-<div class="job-market" role="note">
-<strong>On the Academic Job Market</strong><br/>
-  I am seeking tenure-track faculty positions in Computer Science,
-  Robotics, and related areas.
-</div>
-<p class="lead">
-    I am a Ph.D. candidate in Computer Science at Purdue University,
-    advised by <a href="https://www.cs.purdue.edu/homes/chunyi/">Prof. Chunyi Peng</a>. My research focuses on
-    <b>robust and efficient visual perception for autonomous robots</b>,
-    with a particular emphasis on real-world drone autonomy. I develop
-    efficient and reliable approaches to <b>semantic and depth perception</b>
-    without relying heavily on costly model retraining.
-  </p>
+<p class="lead">I am a Ph.D. candidate in Computer Science at Purdue University, advised by <a href="https://www.cs.purdue.edu/homes/chunyi/" rel="noopener noreferrer" target="_blank">Prof. Chunyi Peng</a>. My research focuses on <b>robust and efficient visual perception for autonomous robots</b>, with a particular emphasis on real-world drone autonomy. I develop efficient and reliable approaches to <b>semantic and depth perception</b> without relying heavily on costly model retraining.</p>
 <p>
 <a href="assets/cv.pdf" rel="noopener noreferrer" target="_blank">
 <strong>Curriculum Vitae →</strong>
 </a>
 </p>
+<div class="job-market" role="note">
+<strong>2027 Academic Job Market</strong><br/>
+  I am seeking tenure-track faculty positions in Computer Science,
+  Robotics, and related areas.
+</div>
+<section id="selected-publications"><h2>Selected Publications</h2><div class="pub"><h3>AnchorDepth: Fast Metric Depth Estimation with Anchors for Drones</h3><div><span class="my-name">S. Xia</span>, J. Du, and C. Peng</div><div class="venue venue-highlight">IEEE/RSJ IROS 2026  <span class="pub-links"><a href="https://youtu.be/a1DMzSVTqrQ" rel="noopener noreferrer" target="_blank">Video</a><a href="https://github.com/shengqingxia/AnchorDepth-dataset" rel="noopener noreferrer" target="_blank">Dataset</a></span></div></div><div class="pub"><h3>Depth4vtol: Precise Depth Estimation for Vertical Take-off and Landing UAVs over Residential Houses</h3><div><span class="my-name">S. Xia</span> and C. Peng</div><div class="venue">ACM ImmerCom 2026  <span class="pub-links"><a href="https://dl.acm.org/doi/abs/10.1145/3842656.3843825" rel="noopener noreferrer" target="_blank">Paper</a></span></div></div><div class="pub"><h3>FollowMe: Automating Precise Image Annotation Across Various Environments</h3><div><span class="my-name">S. Xia</span>, J. Du, and C. Peng</div><div class="venue">ACM HumanSys 2026  <span class="pub-links"><a href="https://dl.acm.org/doi/abs/10.1145/3842436.3843797" rel="noopener noreferrer" target="_blank">Paper</a></span></div></div><div class="pub"><h3>A4AWD: Augmenting Aerial Weed Detection over Residential Lawns</h3><div>J. Du, <span class="my-name">S. Xia</span>, and C. Peng</div><div class="venue">IEEE ICUAS 2026  <span class="pub-links"><a href="https://www.researchgate.net/publication/409804024_A4AWD_Augmenting_Aerial_Weed_Detection_Over_Residential_Lawns" rel="noopener noreferrer" target="_blank">Paper</a><a href="https://github.com/mssn/awd" rel="noopener noreferrer" target="_blank">Dataset</a></span></div></div><div class="pub"><h3>RSSS: Robust Structural Semantic Segmentation for Autonomous Drone Delivery to Door</h3><div><span class="my-name">S. Xia</span>, J. Du, and C. Peng</div><div class="venue venue-highlight">IEEE/RSJ IROS 2025  <span class="pub-links"><a href="https://ieeexplore.ieee.org/document/11247732" rel="noopener noreferrer" target="_blank">Paper</a><a href="https://www.youtube.com/watch?v=h9zZAIhMD6w&amp;list=PL2du247P7uh8C33j3rgBu-qloBqM7iyjA" rel="noopener noreferrer" target="_blank">Video</a><a href="https://github.com/shengqingxia/RSSS-dataset.git" rel="noopener noreferrer" target="_blank">Dataset</a></span></div></div><div class="pub"><h3>SSS: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics</h3><div><span class="my-name">S. Xia</span>, J. Guo, and C. Peng</div><div class="venue">ACM HotMobile 2024  <span class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3638550.3641129" rel="noopener noreferrer" target="_blank">Paper</a><a href="https://ddd.cs.purdue.edu" rel="noopener noreferrer" target="_blank">Demo</a><a href="https://github.com/mssn/dd-demo/blob/main/demo.mp4" rel="noopener noreferrer" target="_blank">Video</a><a href="https://github.com/mssn/dd-demo" rel="noopener noreferrer" target="_blank">Code</a></span></div><div class="award-note">Best Demo Award · ACM HotMobile 2024</div></div><div class="pub"><h3>OPA: One-Predict-All For Efficient Deployment</h3><div>J. Guo, <span class="my-name">S. Xia</span> (co-primary author), and C. Peng</div><div class="venue venue-highlight">IEEE INFOCOM 2023  <span class="pub-links"><a href="https://ieeexplore.ieee.org/document/10228928/" rel="noopener noreferrer" target="_blank">Paper</a></span></div></div></section>
 </div>
 </section>
-<section id="selected-publications"><h2>Selected Publications</h2><h2>2026</h2><div class="pub"><h3>Depth4vtol: Precise Depth Estimation for Vertical Take-off and Landing UAVs over Residential Houses</h3><div><b>S. Xia</b> and C. Peng</div><div class="muted">ACM ImmerCom 2026</div></div><div class="pub"><h3>FollowMe: Automating Precise Image Annotation Across Various Environments</h3><div><b>S. Xia</b>, J. Du, and C. Peng</div><div class="muted">ACM HumanSys 2026</div></div><div class="pub"><h3>AnchorDepth: Fast Metric Depth Estimation with Anchors for Drones</h3><div><b>S. Xia</b>, J. Du, and C. Peng</div><div class="muted">IEEE/RSJ IROS 2026</div></div><div class="pub"><h3>A4AWD: Augmenting Aerial Weed Detection over Residential Lawns</h3><div>J. Du, <b>S. Xia</b>, and C. Peng</div><div class="muted">IEEE ICUAS 2026</div></div><h2>2025</h2><div class="pub"><h3>RSSS: Robust Structural Semantic Segmentation for Autonomous Drone Delivery to Door</h3><div><b>S. Xia</b>, J. Du, and C. Peng</div><div class="muted">IEEE/RSJ IROS 2025</div></div><h2>2024</h2><div class="pub"><h3>SSS: Towards Autonomous Drone Delivery to Your Door Over House-Aware Semantics</h3><div><b>S. Xia</b>, J. Guo, and C. Peng</div><div class="muted">ACM HotMobile 2024</div><div class="award-note">Best Demo Award · ACM HotMobile 2024</div></div><h2>2023</h2><div class="pub"><h3>OPA: One-Predict-All For Efficient Deployment</h3><div>J. Guo, <b>S. Xia</b> (co-primary author), and C. Peng</div><div class="muted">IEEE INFOCOM 2023</div></div></section>
-
 </main>
 <footer>© 2026 Shengqing Xia · Purdue University</footer>
 </body>
